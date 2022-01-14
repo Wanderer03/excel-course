@@ -25,6 +25,7 @@
   "homepage": "https://github.com/Wanderer03/excel-course#readme",
   "private": true,
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^10.2.0",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.66.0",
