@@ -13,13 +13,16 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
-      extentions: ['.js'],
-
+    extentions: [".js"],
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+      "@core": path.resolve(__dirname, "src/core"),
+    },
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "index.html"
+      template: "index.html",
     }),
     new CopyPlugin([
       {
@@ -28,7 +31,7 @@ module.exports = {
       },
     ]),
     new MiniCssExtractPlugin({
-      filename: "bundle.[hash].css"
-    })
-  ]
-}
+      filename: "bundle.[hash].css",
+    }),
+  ],
+};
